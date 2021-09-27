@@ -67,7 +67,7 @@ export default function TextForm(props) {
       <div style={{color: props.mode === 'dark'? 'white': 'black'}} className="container my-3 summary text-center" >
         <h1>Your text summary</h1>
         <p>
-          {text.split(" ").length} words and {text.length} characters
+          {text.split(" ").filter((element)=>{return element.length !== 0}).length} words and {text.length} characters
         </p>
         <p>
           This will take average {0.008 * text.split(" ").length} minutes time
